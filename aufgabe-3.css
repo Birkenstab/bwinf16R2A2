@@ -1,0 +1,60 @@
+
+body {
+    font-family: sans-serif;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    line-height: 100vh;
+}
+
+.popup {
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 100%;
+}
+
+#intersections {
+    height: calc(100vh - 100px);
+    width: calc(100vw - 320px);
+}
+
+#intersections > circle {
+    fill: #000000;
+}
+
+#intersections > text {
+    font-size: 0.3px;
+    fill: #ffffff;
+    z-index: 3;
+}
+
+#intersections > line {
+    stroke-width: 0.05px;
+    stroke: #000000;
+    z-index: -1;
+}
+
+#controlbar {
+    display: inline-block;
+    float: right;
+    background-color: #bfcacf;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    min-height: 350px;
+    text-align: center;
+}
+
+#routenTextArea {
+    margin: 20px;
+}

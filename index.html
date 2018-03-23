@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="author" content="Moritz Beck (Birkenstab.de)">
+    <script src="logik.js"></script>
+    <script src="aufgabe-2.js"></script>
+    <link rel="stylesheet" href="aufgabe-3.css">
+</head>
+<body onload="init();">
+
+<div id="controlbar">
+    <p id="infoText">Wähle ein Straßennetz aus und drücke auf „Laden“ oder wähle "Dateiinhalt eingeben" um eine eigene Datei auszuwählen</p>
+    <select id="netzSelector"></select>
+    <button id="ladeButton">Laden</button>
+    <br>
+    <button id="dateiinhaltEingebenButton">Dateiinhalt eingeben</button>
+    <hr>
+    <p id="infoText2">Route berechnen</p>
+    <label for="startKreuzungSelector">Start: </label><select id="startKreuzungSelector" disabled></select>
+    <br>
+    <label for="endKreuzungSelector">Ende: </label><select id="endKreuzungSelector" disabled></select>
+    <br>
+    <label for="routenTypSelector">Routentyp: </label>
+    <select id="routenTypSelector" disabled>
+        <option value="0">Wenige Straßenabschnitte</option>
+        <option value="1">Kurze Distanz</option>
+        <option value="2">Wenig Abbiegen</option>
+    </select>
+    <br>
+    <button id="routeBerechnenButton" disabled>Route berechnen</button>
+    <hr>
+    <p id="infoText3">Sind alle Kreuzungen von allen Kreuzungen ohne Linksabbiegen erreichbar?</p>
+    <button id="allesErreichbarButton" disabled>Testen</button>
+    <hr>
+    <p id="infoText4">Zwischen welcher Start- und Endkreuzung wird die Strecke nach dem verboten am größten im Vergleich zu davor?</p>
+    <label for="routenTypSelector">Routentyp: </label>
+    <select id="routeTypeAmLaengstenSelector" disabled>
+        <option value="0">Wenige Straßenabschnitte</option>
+        <option value="1">Kurze Distanz</option>
+        <option value="2">Wenig Abbiegen</option>
+    </select>
+    <button id="amLaengstenButton" disabled>Testen</button>
+</div>
+
+<svg id="intersections" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1 -1 10 10"></svg>
+<br>
+<textarea id="routenTextArea" cols="50" rows="30"></textarea>
+</body>
+</html>
